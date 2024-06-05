@@ -1,0 +1,46 @@
+{
+    "tags": {
+        "allowUnknownTags": ["optional"]
+    },
+    "plugins": [
+        "plugins/markdown",
+        "better-docs/category",
+        "better-docs/component",
+        "node_modules/better-docs/typescript"
+    ],
+    "source": {
+        "include": [ "src/" ],
+        "includePattern": "\\.(jsx|js|ts|tsx)$"
+    },
+    "opts": {
+        "encoding": "utf8",
+        "readme": "README.md",
+        "destination": "docs/",
+        "recurse": true,
+        "verbose": true,
+        "template": "./node_modules/better-docs"
+    },
+    "templates": {
+        "default": {
+            "staticFiles": {
+                "include": [
+                    "./docs_statics"
+                ]
+            }
+        },
+        "better-docs": {
+            "name": "Pokemon",
+            "css": "style.css",
+            "trackingCode": " <link rel='icon' type='image/png' href='LogoFilled.png'> <link href='https://fonts.googleapis.com/css2?family=Montserrat&display=swap' rel='stylesheet'> <link href='https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap' rel='stylesheet'> <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'> </script> <script src='jsdocAdded.js' ></script>",
+            "hideGenerator": true,
+            "navLinks": [
+                {
+                    "label": "Author : Salim BRAHMI",
+                    "href": "https://www.linkedin.com/in/salim-brahmi-dev/"
+                }
+            ]
+        },
+        "search": true,
+        "monospaceLinks": true
+    }
+}

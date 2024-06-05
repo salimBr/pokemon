@@ -1,0 +1,178 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+.sidebar a:hover, .sidebar a.active, .side-nav a:hover, .side-nav a.is-active {
+    color : #447AEE
+}
+
+.top-nav {
+    background : linear-gradient(90deg, rgb(19, 19, 180) 0%, rgb(23, 62, 190) 34%, rgb(72, 191, 255) 83%);
+}
+.button {
+    background: #447AEE;
+    color: white;
+    border-radius: 54px;
+   border-color: #447AEE;
+
+}
+.button:hover {
+color: white;
+border-color: #447AEE;
+}
+.top-nav h1 {
+    color: white !important;
+   font-weight: bold;
+   font-family: 'Philosopher', sans-serif;
+   margin-left: 42px;
+    padding-left: 18px
+}
+.top-nav h1::before {
+content: "";
+  width: 51px;
+  height: 51px;
+  z-index: 2;
+  border-radius:25px;
+  background: url(empty-pokeball.png) no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 0px;
+  left:-44px;
+}
+.dropdown.is-hoverable.is-right {
+display: none !important;
+}
+.top-nav .menu .navigation>a:first-child {
+    display: none !important;
+}
+
+#main>.sidebar {
+    width: 254px;
+    padding: 40px 20px !important;
+}
+.sidebar .search-wrapper input {
+    border-radius:22px
+}
+#main>.core>.content {
+    padding : 31px !important;
+}
+.top-nav .menu .navigation>a {
+    font-size: 16px;
+    color : white !important;
+    margin-right:40px !important;
+}
+
+#main>.core>.content>.page-title {
+    position: relative !important
+}
+
+.side-nav  a, .sidebar a {
+text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
+display: block;
+max-width: 100%
+}
+.content h1, .content header.page-title h1 {
+    font-family: 'Philosopher', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    word-break: break-word
+}
+.content h2 {
+    font-size: 22px
+}
+.tag-source span a{
+    color: rgb(55, 55, 55)
+}
+dl > dt > a {
+    font-size:  20px;
+    font-weight: bold;
+    color: rgb(102,159,52);
+    border-bottom: 2px solid rgb(102,159,52);
+}
+dl > dt > a:hover {
+    color: rgb(102,159,52);
+}
+.prettyprint {
+    background-color: #f5f5f5
+}
+.sidebar .search-wrapper {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 38px;
+    position: relative;
+}
+.sidebar .search-wrapper::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  z-index: 3;
+  background: url(search.png) no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 11px;
+  left: 11px;
+}
+.sidebar .search-wrapper input {
+    background-color: white;
+    max-width: 230px;
+    border-color: white;
+    box-shadow: 4px 4px 40px 4px rgba(115,134,160,0.24);
+    font-family: 'Montserrat', sans-serif;
+    text-indent: 25px;
+    
+}
+.sidebar .search-wrapper input:focus {
+    background-color: white;
+    box-shadow: 4px 4px 40px 4px rgba(115,134,160,0.24);
+}
+.member>.description p {
+    font-size: 15px;
+    line-height: 1.8
+}
+.member>.name .code-name {
+    font-family:  'Montserrat', sans-serif;
+}
+.content header h2 {
+    display: none;
+}
+.sidebar .category h2 {
+    font-weight: bold;
+    color: #333333
+}
+.sidebar .category h3 {
+    font-weight: bold;
+}
+.top-nav #hamburger {
+    color: white;
+}
+.top-nav #hamburger:hover {
+    background-color: transparent;
+    margin-left: -25px;
+    margin-right: 12px
+}
+.sidebar .category.CollapsableCat {
+ cursor:pointer;
+ position: relative
+}
+.sidebar .category.CollapsableCat h3 {
+    font-size: 20px;
+    font-weight : bold
+}
+.sidebar .category.CollapsableCat h3::before {
+content: "";
+  width: 14px;
+  height: 14px;
+  background: url(forward.png) no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 5px;
+  right: 5px
+}
+dd.tag-see a {
+  color: rgb(41, 104, 178);
+  
+}
+.pln, .com{
+    color : black
+}
