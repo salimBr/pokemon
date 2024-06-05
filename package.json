@@ -1,7 +1,21 @@
 {
   "name": "pokemon",
-  "version": "1.0",
-  "private": true,
+  "description": "Pokemon react native app",
+  "version": "1.0.1",
+  "private": false,
+  "author": "Salim BRAHMI<salimbrahmi11@gmail.com>",
+  "license": "",
+  "keywords": [
+    "pokemon",
+    "react-native",
+    "react-navigation",
+    "redux-toolkit",
+    "rtkquey",
+    "jest",
+    "ts",
+    "jsdoc",
+    "better-docs"
+  ],
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
