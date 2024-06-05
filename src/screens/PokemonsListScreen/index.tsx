@@ -36,6 +36,7 @@ const PokemonListScreen: React.FC = () => {
   const navigation = useNavigation<RootStackNavigationParams>();
   const [pokemonList, setPokemonList] = useState<Pokemon[]>([]);
   const [refreshing, setRefreshing] = useState(false);
+  const [isFirstAppear, setIsFirstAppear] = useState(true);
 
   useEffect(() => {
     if (!data?.results) return;
@@ -47,6 +48,7 @@ const PokemonListScreen: React.FC = () => {
     }
 
     setRefreshing(false);
+    setIsFirstAppear(false)
   }, [data]);
 
   useEffect(() => {
@@ -84,7 +86,11 @@ const PokemonListScreen: React.FC = () => {
    * Renders the empty component when there's no data to display.
    * @returns A JSX element representing the empty component.
    */
-  const renderEmptyComponent = () => <NoDataItem onClick={() => refetch()} />;
+  const renderEmptyComponent = () => {
+    if (isLoading) return null;
+
+    <NoDataItem onClick={() => refetch()} />;
+  };
 
   /**
    * Renders the footer component when loading more data.
@@ -142,23 +148,28 @@ const PokemonListScreen: React.FC = () => {
     [],
   );
 
+  const arrayForLoader = useCallback(() => generateArrayOfNumbers(12), []);
+
+  const dataForList = useCallback(() => (isLoading || isFirstAppear) && !pokemonList?.length ? arrayForLoader() : pokemonList, [pokemonList, isFirstAppear, isLoading]);
+
+
   return (
     <View style={Styles.container}>
       <VirtualizedList
-        data={
-          isLoading && !pokemonList?.length
-            ? generateArrayOfNumbers(12)
-            : pokemonList
-        }
+        data={dataForList()}
         renderItem={renderItem}
         ListEmptyComponent={renderEmptyComponent}
         ListFooterComponent={renderFooter}
         onEndReached={handleLoadMore}
-        onEndReachedThreshold={0.5}
+        onEndReachedThreshold={0.3}
         removeClippedSubviews={true}
         keyExtractor={keyExtractor}
         getItem={getItem}
         getItemCount={getItemCount}
+        initialNumToRender={20}
+        maxToRenderPerBatch={20}
+        windowSize={12}
+        updateCellsBatchingPeriod={100}
         refreshControl={
           <RefreshControl refreshing={refreshing} onRefresh={handleRefresh} />
         }
