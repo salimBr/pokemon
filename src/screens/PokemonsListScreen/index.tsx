@@ -53,6 +53,7 @@ const PokemonListScreen: React.FC = () => {
 
   useEffect(() => {
     setRefreshing(false);
+    setIsFirstAppear(false);
   }, [error]);
 
   /**

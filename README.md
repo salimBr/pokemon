@@ -5,7 +5,7 @@
 
 - clone the repository or copy the content of pokemon directory into «your directory»
 - cd «your directory»
-- npm i
+- npm i --legacy-peer-deps
 - npx pod-install
 
 ## Environment variables
