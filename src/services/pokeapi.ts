@@ -7,7 +7,7 @@ import { BASE_URL } from '@env'
  */
 export const pokemonApi = createApi({
   reducerPath: 'pokeapi', /**< The slice name for the reducer. */
-  baseQuery: fetchBaseQuery({ baseUrl: `${BASE_URL}` }), /**< The base query configuration including the base URL. */
+  baseQuery: fetchBaseQuery({ baseUrl: BASE_URL }), /**< The base query configuration including the base URL. */
   endpoints: (builder) => ({
     /**
      * Retrieves a list of Pokemon.
