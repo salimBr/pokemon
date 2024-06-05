@@ -1,7 +1,7 @@
 {
   "name": "pokemon",
   "description": "Pokemon react native app",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": false,
   "author": "Salim BRAHMI<salimbrahmi11@gmail.com>",
   "license": "",
@@ -20,6 +20,7 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "lint": "eslint .",
+    "doctor": "npx react-native doctor",
     "start": "npx react-native start --experimental-debugger",
     "devtools": "npx react-devtools",
     "test": "jest --watchAll",
