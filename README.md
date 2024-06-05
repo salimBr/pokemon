@@ -1,4 +1,4 @@
-# Pokemon React native app Documentation
+# Pokemon React native app
 
 
 ## Setup

@@ -1,6 +1,6 @@
 {
-  "name": "Pokemon",
-  "version": "0.0.1",
+  "name": "pokemon",
+  "version": "1.0",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
